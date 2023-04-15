@@ -2,19 +2,17 @@ import React from "react";
 import { useState } from "react";
 import "./login.css";
 import Logo from "../Logo/logo";
-import { Link, useNavigate } from "react-router-dom";
-import GoogleButton from "react-google-button";
+import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../utils/UserAuthContext";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const handleChange = (event) => {};
 
   const [error, setError] = useState("");
 
-  const { logIn, googleSignIn } = useUserAuth();
+  const { logIn } = useUserAuth();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -27,14 +25,6 @@ function Login() {
     }
   }
 
-  async function handleGoogleSIgnIn(e) {
-    e.preventDefault();
-    try {
-      await googleSignIn();
-    } catch (error) {
-      console.log(error);
-    }
-  }
   return (
     <div className="form-container">
       <Logo />

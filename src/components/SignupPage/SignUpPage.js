@@ -2,12 +2,10 @@ import React from "react";
 import { useState } from "react";
 import "./Signup.css";
 import Logo from "../Logo/logo";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../../utils/UserAuthContext";
 
-
-function Sign_up() {
-  const [inputs, setInputs] = useState({});
+function SignUp() {
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
@@ -20,23 +18,22 @@ function Sign_up() {
 
   const [error, setError] = useState("");
 
-  const { signUp } = useUserAuth()
+  const { signUp } = useUserAuth();
 
   async function handleSubmit(e) {
     e.preventDefault();
     setError("");
     try {
       await signUp(email, password);
-      navigate("/login")
+      navigate("/login");
     } catch (error) {
       setError(error.message);
     }
   }
   return (
-    
     <div className="form-container">
       <Logo />
-      
+
       <form onSubmit={handleSubmit} className="login-form">
         <label>
           Enter your name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -44,7 +41,7 @@ function Sign_up() {
             type="text"
             name="username"
             value={name}
-            onChange={(e)=>setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             className="border-2 border-gray-200 py-1 rounded-lg"
           />
         </label>
@@ -57,7 +54,7 @@ function Sign_up() {
             type="text"
             name="email"
             value={email}
-            onChange={(e)=>setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             className="border-2 border-gray-200 py-1 rounded-lg"
           />{" "}
         </label>
@@ -71,7 +68,7 @@ function Sign_up() {
             name="acc_number"
             className="border-2 border-gray-200 py-1 rounded-lg"
             value={acc_number}
-            onChange={(e)=>setAcc_number(e.target.value)} 
+            onChange={(e) => setAcc_number(e.target.value)}
           />{" "}
         </label>
         <br />
@@ -83,7 +80,7 @@ function Sign_up() {
             type="text"
             name="course"
             value={course}
-            onChange={(e)=>setCourse(e.target.value)}
+            onChange={(e) => setCourse(e.target.value)}
             className="border-2 border-gray-200 py-1 rounded-lg"
           />{" "}
         </label>
@@ -96,7 +93,7 @@ function Sign_up() {
             type="password"
             name="password"
             value={password}
-            onChange={(e)=>setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             className="border-2 border-gray-200 py-1 rounded-lg"
           />{" "}
         </label>
@@ -109,7 +106,7 @@ function Sign_up() {
             type="password"
             name="confirm_password"
             value={confirm_password}
-            onChange={(e)=>setConfirm_password(e.target.value)}
+            onChange={(e) => setConfirm_password(e.target.value)}
             className="border-2 border-gray-200 py-1 rounded-lg"
           />{" "}
         </label>
@@ -212,4 +209,4 @@ function Sign_up() {
   );
 }
 
-export default Sign_up;
+export default SignUp;

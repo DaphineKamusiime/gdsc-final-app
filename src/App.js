@@ -1,9 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/HomePage/HomePage";
 import Login from "./components/LoginPage/LoginPage";
-import Sign_up from "./components/SignupPage/SignUpPage";
+import SignUp from "./components/SignupPage/SignUpPage";
 import Profile from "./components/ProfilepPage/ProfilePage";
 import About from "./components/AboutPage/About";
 import Images from "./components/ImagesPage/Images";
@@ -21,7 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/sign_up" element={<Sign_up />} />
+          <Route path="/sign_up" element={<SignUp />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/about" element={<About />} />
           <Route path="/images" element={<Images />} />

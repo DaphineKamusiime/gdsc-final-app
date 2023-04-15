@@ -10,7 +10,7 @@ function Images() {
         <div>
           <img
             src="https://user-images.githubusercontent.com/107240847/232216121-842e67c2-dfc4-44a8-906e-f88904a92c39.jpeg"
-            alt="image"
+            alt="image0"
             className="object-cover h-48 w-96 "
           />
         </div>

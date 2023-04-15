@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react";
 import BasicCard from "../BasicCard";
 import { useUserAuth } from "../../utils/UserAuthContext";
 
