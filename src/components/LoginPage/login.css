@@ -1,0 +1,20 @@
+.form-container{
+display: grid;
+place-items: center;
+height: 100vh;
+}
+
+.login-form{
+    border: 2px solid rgb(245, 243, 243);
+    padding: 100px 50px;
+    border-radius: 10px;
+}
+
+
+
+.submit-btn{
+ border: 1px solid;
+ padding: 10px 20px;
+ cursor: pointer;
+ margin-top: 20px;
+}

@@ -1,0 +1,19 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+}
+
+.navlinks-container{
+ margin: auto 0;
+}
+
+.navbtns-container{
+    margin: auto 0;
+}
+
+.navbtns-container button{
+ border: 1px solid;
+ padding: 10px 20px;
+ cursor: pointer;
+}
